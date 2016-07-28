@@ -1,12 +1,37 @@
 {
   "name": "viewport-update",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Throttled window scroll and resize events. In the singleton + signal way",
-  "repository": "jeromedecoster/canvas-funcs",
+  "repository": "jeromedecoster/viewport-update",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "throttle",
+    "window",
+    "scroll",
+    "resize",
+    "event",
+    "singleton",
+    "signal"
+  ],
+  "author": {
+    "name": "Jérôme Decoster",
+    "url": "http://jeromedecoster.com"
+  },
+  "license": "MIT",
   "scripts": {
+    "start": "budo src/index.js:bundle.js --dir src --host localhost --port 3000 --no-debug --open",
+    "dev": "budo src/index.js:bundle.js --dir src --port 3000 --no-debug --live",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "MIT"
+  "devDependencies": {
+    "budo": "^8.3.0"
+  },
+  "dependencies": {
+    "scroll-resize": "^0.3.1",
+    "set-funcs": "^0.1.1",
+    "signalus-simplex": "^0.1.1"
+  }
 }
